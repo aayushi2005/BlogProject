@@ -1,0 +1,26 @@
+const mongoose=require("mongoose")
+const Schema= mongoose.Schema;
+const Postschema= new Schema({
+    title:{
+        type:String,
+        required:true
+    },
+    body:{
+        type:String,
+        required:true
+    },
+    createAt:{
+        type:Date,
+       default:Date.now
+    },
+    createdAt:{
+        type:Date,
+        default:Date.now
+    },
+    updatedAt:{
+        type:Date,
+        default:Date.now
+    }
+    
+})
+module.exports=mongoose.model('Posts',Postschema)
